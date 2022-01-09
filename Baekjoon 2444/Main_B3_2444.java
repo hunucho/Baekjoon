@@ -30,5 +30,5 @@ public class Main_B3_2444 {
 				System.out.print("*");
 			System.out.println("");
 		}
-	}
+	} 
 }
