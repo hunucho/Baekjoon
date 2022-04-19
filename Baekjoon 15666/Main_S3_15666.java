@@ -3,10 +3,8 @@ package silver;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Main_S3_15666 {
 	static boolean [] checked = new boolean[10];
@@ -30,7 +28,7 @@ public class Main_S3_15666 {
 		for (int i = start; i < n; i++) {
 			if(!checked[i]) {
 				res[depth] = data[i];
-//				checked[i]=false;
+				checked[i]=false;
 				f(i, depth + 1);
 				checked[i]=false;
 			}
@@ -42,7 +40,6 @@ public class Main_S3_15666 {
 		n = sc.nextInt();
 		m = sc.nextInt();
 		data = new int[n];
-		int max=0;
 		for (int i = 0; i < n; i++) {
 			data[i] = sc.nextInt();
 			number[data[i]]++;
@@ -50,5 +47,6 @@ public class Main_S3_15666 {
 		Arrays.sort(data);
 		f(0, 0);
 		bw.close();
+		sc.close();
 	}
 }
