@@ -9,11 +9,12 @@ public class Main_S3_3613 {
 		String s = br.readLine();
 		boolean isC=false, isJ=false, err=false;
 		for(int i=0;i<s.length();i++) {
-			if(s.charAt(i)>='A' && s.charAt(i)<='Z')
+			char cur=s.charAt(i);
+			if(cur>='A' && cur<='Z')
 				isJ=true;
-			if(s.charAt(i)=='_')
+			if(cur=='_')
 				isC=true;
-			if(!(Character.isLetter(s.charAt(i)) || s.charAt(i)=='_')) {
+			if(!(Character.isLetter(cur) || cur=='_')) {
 				err=true;
 				break;
 			}
