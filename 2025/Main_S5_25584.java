@@ -35,7 +35,6 @@ public class Main {
             if(min>hm.get(name))
                 min=hm.get(name);
         }
-        //System.out.println(max+" "+min);
         System.out.println(min+12<max?"No":"Yes");
     }
 }
