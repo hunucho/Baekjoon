@@ -12,15 +12,20 @@ public class Main {
                 s++;
             else if(ch=='L')
                 l++;
-            else if(Character.isDigit(ch))
+            else if(ch=='K'){
+                if(s>0) {
+                    ans++;
+                    s--;
+                } else
+                    break;
+            } else if(ch=='R'){
+                if(l>0) {
+                    ans++;
+                    l--;
+                } else
+                    break;
+            } else
                 ans++;
-            else if(ch=='K' && s>0){
-                s--;
-                ans++;
-            } else if(ch=='R' && l>0){
-                l--;
-                ans++;
-            }
         }
         System.out.print(ans);
     }
